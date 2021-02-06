@@ -1,3 +1,4 @@
+//name spacing
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
@@ -7,6 +8,7 @@ var box1, pig1;
 var backgroundImg,platform;
 
 function preload() {
+    //loaded background img
     backgroundImg = loadImage("sprites/bg.png");
 }
 
@@ -17,6 +19,7 @@ function setup(){
 
 
     ground = new Ground(600,height,1200,20);
+    //Created Platform
     platform = new Ground(150, 305, 300, 170);
 
     box1 = new Box(700,320,70,70);
@@ -39,6 +42,7 @@ function setup(){
 }
 
 function draw(){
+    //displaying background
     background(backgroundImg);
     Engine.update(engine);
     console.log(box2.body.position.x);
@@ -60,5 +64,6 @@ function draw(){
     log5.display();
 
     bird.display();
+    //displaying platform
     platform.display();
 }
